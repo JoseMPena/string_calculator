@@ -21,5 +21,13 @@ describe StringCalculator do
         end
       end
     end
+
+    context "given 2 comma-separated numbers as string" do
+      context "2,7" do
+        it "returns the addition '9'" do
+          expect(StringCalculator.add("2,7")).to eql(9)
+        end
+      end
+    end
   end
 end
