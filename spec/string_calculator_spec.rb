@@ -29,5 +29,13 @@ describe StringCalculator do
         end
       end
     end
+
+    context "given multiple comma-separated numbers as string" do
+      context "10,5,200,151,27" do
+        it "returns the sum of all numbers" do
+          expect(StringCalculator.add("10,5,200,151,27")).to eql(393)
+        end
+      end
+    end
   end
 end
