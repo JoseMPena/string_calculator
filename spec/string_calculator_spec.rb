@@ -15,7 +15,11 @@ describe StringCalculator do
         end
       end
 
-    #   context "'10'"
+      context "'10'" do
+        it "returns 10" do
+          expect(StringCalculator.add("10")).to eql(10)
+        end
+      end
     end
   end
 end
