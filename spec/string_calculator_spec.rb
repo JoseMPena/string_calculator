@@ -37,5 +37,13 @@ describe StringCalculator do
         end
       end
     end
+
+    context "given comma-separated decimal numbers as string" do
+      context "2.5, 10.68, 27.02" do
+        it "returns the sum of the numbers" do
+          expect(StringCalculator.add("2.5, 10.68, 27.02")).to eql(40.20)
+        end
+      end
+    end
   end
 end
