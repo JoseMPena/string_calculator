@@ -1,9 +1,6 @@
 class StringCalculator
   def self.add(string)
-    if string.include? ","
-      string.split(",").map(&:to_i).reduce(:+)
-    else
-      string.to_i
-    end
+    return string.to_i unless string.include? ","
+    string.split(",").map(&:to_i).reduce(:+)
   end
 end
